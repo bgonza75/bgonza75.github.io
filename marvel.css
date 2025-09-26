@@ -1,0 +1,228 @@
+body {
+    background-color: #FFFFFF;
+    color: #1C1C1C;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;      
+    background-size: cover;          
+    background-attachment: fixed;      
+    background-position: center;
+}
+
+a {
+    color: #1A3C7C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gold-border {
+    border: 5px solid #FFD700;
+}
+
+#wrapper {
+    background-color: #FFD700;
+    background-image: linear-gradient(to bottom, #FFFFFF, #ED1D24);
+    border: 5px solid #FFD700;
+    margin: 0;
+}
+
+main {
+    background-color: #FFFFFF;
+    display: block;
+    padding: 1px 20px 20px 30px;
+    overflow: auto;
+    border: 5px solid #FFD700;
+    margin: 0;
+}
+
+header {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    padding-left: 120px;
+}
+
+footer {
+    background-color: #FFD700;
+    font-size: 85%;
+    font-style: italic;
+    text-align: center;
+    padding: 2em;
+}
+
+.logo {
+    position: absolute;
+    left: 10px; 
+    height: 50px;
+    width: auto;
+}
+
+header a:link,
+header a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav {
+    font-weight: bold; 
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;  
+    margin: 0;             
+    padding-left: 0;        
+    font-size: 1.2em;
+}
+
+nav li {
+    border-bottom: 1px solid #ED1D24;
+}
+
+nav a:link,
+nav a:visited {
+    color: #1A3C7C;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ED1D24;
+}
+
+#homehero {
+    height: 300px;                        
+    background-image: url("marvelbanner.jpg");    
+    background-size: 100% 100%;          
+    background-repeat: no-repeat;
+    border: 5px solid #FFD700; 
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 0;
+    padding: 0.5em 0;
+}
+
+h2 {
+    color: #1A3C73;
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #000033;
+}
+
+main ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+main ul li {
+    background: url("marker.png") no-repeat left center;
+    background-size: 16px 16px;  
+    padding-left: 24px;  
+    margin-bottom: 6px;
+}
+
+dt {
+    color: #1A3C7C;
+}
+
+.resort {
+    color: #1A3C7C;
+    font-weight: bold;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+.ironman {
+    color: #ED1D24;   
+    font-weight: bold; 
+}
+
+.journey-img {
+    display: block;
+    margin: 10px auto 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;       
+    border: 5px solid #FFD700;
+}
+
+.side-by-side {
+    display: flex;
+    gap: 2em; 
+    flex-wrap: wrap;
+}
+
+.side-by-side section {
+    flex: 1; 
+    min-width: 300px;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    section {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flow section {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-areas:
+            "header header" 
+            "nav hero" 
+            "nav main"
+            "nav footer";
+        grid-template-columns: 180px 1fr;
+    }
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 1em;
+    }
+
+    header { grid-area: header; }
+    nav    { grid-area: nav; }
+    main   { grid-area: main; }
+    footer { grid-area: footer; }
+    .hero  { grid-area: hero; }
+}
+
