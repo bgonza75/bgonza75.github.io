@@ -103,6 +103,15 @@ nav a:hover {
     margin: 0;
 }
 
+#phase1-3hero {
+    height: 300px;                        
+    background-image: url("timeline.jpg");    
+    background-size: 100% 100%;          
+    background-repeat: no-repeat;
+    border: 5px solid #FFD700; 
+    margin: 0;
+}
+
 h1 {
     margin: 0;
     letter-spacing: 0;
@@ -165,9 +174,59 @@ dt {
 }
 
 .side-by-side section {
-    flex: 1; 
-    min-width: 300px;
+    flex: 1;            
+    min-width: 300px;   
 }
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px; 
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#gallery img {
+  width: 100%;
+  height: 300px;  
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+table {
+    border: 2px solid #1A3C7C;
+    border-collapse: collapse;
+    width: 100%;           
+    max-width: 1200px;    
+    margin: 0 auto;       
+    font-size: 1.1em;      
+}
+
+th, td {
+    padding: 1em;     
+    border: 2px solid #1A3C7C;
+}
+
+th {
+    background-color: #1A3C7C;
+    color: white;
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+td {
+    text-align: center;
+}
+
+.text {
+    text-align: left;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #FFFFFF;
+}
+
 
 @media (min-width: 600px) {
     nav ul {
